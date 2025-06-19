@@ -10,4 +10,11 @@ class Person extends Model
     protected $casts = [
         'date_of_birth' => 'date',
     ];
+
+    public function getFullNameAttribute() {
+        return
+            $this->first_name . ' ' .
+            $this->middle_names . ' ' .
+            $this->last_name;
+    }
 }

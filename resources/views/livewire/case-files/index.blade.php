@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">Case Files</flux:heading>
+        <flux:heading size="lg">Case files</flux:heading>
 
         <flux:button wire:click="$dispatch('show-case-file-form')" size="sm">
             <i class="fa-regular fa-folder-open w-8"></i>
@@ -14,9 +14,9 @@
         <table class="table-fixed w-full">
             <thead>
             <tr class="border-b">
-                <td class="p-2">Name</td>
-                <td class="p-2">Status</td>
-                <td class="w-8"></td>
+                <th class="text-start font-normal p-2">Name</th>
+                <th class="text-start font-normal p-2">Status</th>
+                <th class="w-8"></th>
             </tr>
             </thead>
             <tbody>

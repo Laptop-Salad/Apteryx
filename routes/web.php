@@ -9,14 +9,17 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', \App\Livewire\Dashboard::class)->name('dashboard');
-    Route::get('/people', \App\Livewire\People::class)->name('people');
+
+    // People
+    Route::get('/people', \App\Livewire\People\Index::class)->name('people');
+    Route::get('/people/{person}', \App\Livewire\People\Show::class)->name('people.show');
 
     // Case Files
     Route::get('/case-files', \App\Livewire\CaseFiles\Index::class)->name('case-files');
     Route::get('/case-files/{case_file}', \App\Livewire\CaseFiles\Show::class)->name('case-files.show');
 
+    // Settings
     Route::redirect('settings', 'settings/profile');
-
     Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');

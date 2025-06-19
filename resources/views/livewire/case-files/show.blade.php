@@ -1,16 +1,8 @@
 <div class="container">
-    <div class="flex space-x-6">
-        <flux:button href="{{route('case-files')}}" size="sm">
-            <i class="fa-regular fa-arrow-left me-2"></i>
-            Back
-        </flux:button>
-
-        <div>
-            <flux:heading size="lg">{{$this->case_file->name}}</flux:heading>
-            <flux:subheading>{{$this->case_file->description}}</flux:subheading>
-            <flux:subheading size="sm" class="mt-2">Unique ID: {{$this->case_file->id}}</flux:subheading>
-        </div>
-    </div>
+    <x-back :route="route('case-files')" :heading="$this->case_file->name">
+        <flux:subheading>{{$this->case_file->description}}</flux:subheading>
+        <flux:subheading size="sm" class="mt-2">Unique ID: {{$this->case_file->id}}</flux:subheading>
+    </x-back>
 
     <flux:navbar class="mt-8">
         <flux:navbar.item current>Overview</flux:navbar.item>

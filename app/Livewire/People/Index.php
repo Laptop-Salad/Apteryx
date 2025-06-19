@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\People;
 
 use App\Models\Person;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class People extends Component
+class Index extends Component
 {
     use WithPagination;
 
@@ -19,6 +19,6 @@ class People extends Component
     }
 
     public function render() {
-        return view('livewire.people');
+        return view('livewire.people.index');
     }
 }

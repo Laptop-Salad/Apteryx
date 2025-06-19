@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name')->default('J');
+            $table->string('first_name');
             $table->string('middle_names')->nullable();
-            $table->string('last_name')->default('Doe');
+            $table->string('last_name');
 
             $table->date('date_of_birth')->nullable();
 

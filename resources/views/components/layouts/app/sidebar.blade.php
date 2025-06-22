@@ -14,28 +14,57 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item
-                        icon="home"
                         :href="route('dashboard')"
                         :current="request()->routeIs('dashboard')"
                         wire:navigate
                     >
+                        <i class="fa-regular fa-home w-8"></i>
                         {{ __('Dashboard') }}
                     </flux:navlist.item>
                     <flux:navlist.item
-                        icon="folder-open"
                         :href="route('case-files')"
                         :current="request()->routeIs('case-files')"
                         wire:navigate
                     >
+                        <i class="fa-regular fa-folder-open w-8"></i>
                         {{ __('Case Files') }}
                     </flux:navlist.item>
                     <flux:navlist.item
-                        icon="user"
                         :href="route('people')"
                         :current="request()->routeIs('people')"
                         wire:navigate
                     >
+                        <i class="fa-regular fa-user w-8"></i>
                         {{ __('People') }}
+                    </flux:navlist.item>
+                    <flux:navlist.item
+                        :href="route('evidence')"
+                        :current="request()->routeIs('evidence')"
+                        wire:navigate
+                    >
+                        <i class="fa-regular fa-receipt w-8"></i>
+                        {{ __('Evidence') }}
+                    </flux:navlist.item>
+                </flux:navlist.group>
+            </flux:navlist>
+
+            <flux:navlist>
+                <flux:navlist.group heading="Organisation">
+                    <flux:navlist.item
+                        :href="route('people')"
+                        :current="request()->routeIs('people')"
+                        wire:navigate
+                    >
+                        <i class="fa-regular fa-building w-8"></i>
+                        {{ __('Organisation') }}
+                    </flux:navlist.item>
+                    <flux:navlist.item
+                        :href="route('people')"
+                        :current="request()->routeIs('people')"
+                        wire:navigate
+                    >
+                        <i class="fa-regular fa-gavel w-8"></i>
+                        {{ __('Legal Database') }}
                     </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
@@ -43,11 +72,11 @@
             <flux:spacer />
 
             <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
+                <flux:navlist.item icon="folder-git-2" href="https://github.com/laptop-salad/apteryx" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
 
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
+                <flux:navlist.item icon="book-open-text" href="https://github.com/laptop-salad/apteryx/tree/master/docs" target="_blank">
                 {{ __('Documentation') }}
                 </flux:navlist.item>
             </flux:navlist>

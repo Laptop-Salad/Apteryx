@@ -18,6 +18,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/case-files', \App\Livewire\CaseFiles\Index::class)->name('case-files');
     Route::get('/case-files/{case_file}', \App\Livewire\CaseFiles\Show::class)->name('case-files.show');
 
+    // Evidence
+    Route::get('/evidence', \App\Livewire\Evidence\Index::class)->name('evidence');
+
     // Settings
     Route::redirect('settings', 'settings/profile');
     Volt::route('settings/profile', 'settings.profile')->name('settings.profile');

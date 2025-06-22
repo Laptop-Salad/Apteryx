@@ -7,6 +7,7 @@
     <flux:navbar class="mt-8">
         <flux:navbar.item current>Overview</flux:navbar.item>
         <flux:navbar.item>People</flux:navbar.item>
+        <flux:navbar.item>Evidence</flux:navbar.item>
         <flux:navbar.item>Timeline</flux:navbar.item>
         <flux:navbar.item>Notes</flux:navbar.item>
         <flux:navbar.item>Access Log</flux:navbar.item>

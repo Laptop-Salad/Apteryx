@@ -1,9 +1,9 @@
 <x-slot:title>Case Files</x-slot:title>
 
 <div class="container">
-    <div class="flex items-center justify-between">
-        <flux:heading size="lg">Case files</flux:heading>
+    <x-header title="Case Files" />
 
+    <div class="flex justify-end">
         <flux:button wire:click="$dispatch('show-case-file-form')" size="sm">
             <i class="fa-regular fa-folder-open w-8"></i>
             New Case File

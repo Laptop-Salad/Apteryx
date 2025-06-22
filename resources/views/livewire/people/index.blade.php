@@ -1,8 +1,8 @@
 <div>
     <div class="container">
-        <div class="flex items-center justify-between">
-            <flux:heading size="lg">People</flux:heading>
+        <x-header title="People" />
 
+        <div class="flex justify-end">
             <flux:button wire:click="$dispatch('show-person-form')" size="sm">
                 <i class="fa-regular fa-user w-8"></i>
                 New Person

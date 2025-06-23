@@ -1,11 +1,11 @@
 <div>
     <div class="container">
-        <x-header title="People" />
+        <x-header :title="__('People')" />
 
         <div class="flex justify-end">
             <flux:button wire:click="$dispatch('show-person-form')" size="sm">
                 <i class="fa-regular fa-user w-8"></i>
-                New Person
+                {{__('Orang Baru')}}
             </flux:button>
         </div>
 
@@ -13,8 +13,8 @@
             <table class="w-full table-auto">
                 <thead>
                 <tr class="border-b">
-                    <th class="text-start font-normal p-2">Name</th>
-                    <th class="text-start font-normal p-2">Age</th>
+                    <th class="text-start font-normal p-2">{{__('Name')}}</th>
+                    <th class="text-start font-normal p-2">{{__('Umur')}}</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -6,7 +6,7 @@
     <div class="flex justify-end">
         <flux:button wire:click="$dispatch('show-case-file-form')" size="sm">
             <i class="fa-regular fa-folder-open w-8"></i>
-            New Case File
+            {{__('New Case File')}}
         </flux:button>
     </div>
 
@@ -14,8 +14,8 @@
         <table class="table-fixed w-full">
             <thead>
             <tr class="border-b">
-                <th class="text-start font-normal p-2">Name</th>
-                <th class="text-start font-normal p-2">Status</th>
+                <th class="text-start font-normal p-2">{{__('Name')}}</th>
+                <th class="text-start font-normal p-2">{{__('Status')}}</th>
                 <th class="w-8"></th>
             </tr>
             </thead>
@@ -34,7 +34,7 @@
                             <p class="text-muted text-sm mt-2">{{$case_file->description}}</p>
                             <p class="text-muted text-xs">Case ID: {{$case_file->id}}</p>
                         </td>
-                        <td class="p-2">{{$case_file->status->display()}}</td>
+                        <td class="p-2">{{__($case_file->status->display())}}</td>
                         <td>
                             <flux:dropdown>
                                 <flux:button icon:trailing="ellipsis-horizontal" size="sm" />

@@ -2,7 +2,7 @@
 
 <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">Hello, {{auth()->user()->name}}.</flux:heading>
+        <flux:heading size="lg">{{__('Hello')}}, {{auth()->user()->name}}.</flux:heading>
 
         <flux:dropdown>
             <flux:button icon:trailing="ellipsis-horizontal" size="sm" />
@@ -10,11 +10,11 @@
             <flux:menu>
                 <flux:menu.item wire:click="$dispatch('show-case-file-form')">
                     <i class="fa-regular fa-folder-open w-8"></i>
-                    New Case File
+                    {{__('New Case File')}}
                 </flux:menu.item>
                 <flux:menu.item wire:click="$dispatch('show-person-form')">
                     <i class="fa-regular fa-user w-8"></i>
-                    New Person
+                    {{__('New Person')}}
                 </flux:menu.item>
             </flux:menu>
         </flux:dropdown>
